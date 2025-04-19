@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landmine Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>💣 Landmine Game - Avoid the Mines!</h1>
+
+    <div class="status">
+      <p><strong>Total Balance:</strong> ₹<span id="balance">1000</span></p>
+      <label>Number of Landmines:
+        <input type="number" id="landmineCount" min="1" max="10" value="3">
+      </label>
+      <label>Bet Amount:
+        <input type="number" id="betAmount" min="1" value="100">
+      </label>
+      <button id="startGame">Start Game</button>
+      <button id="cashout" disabled>Cash Out</button>
+      <p><strong>Profit:</strong> ₹<span id="profit">0</span></p>
+    </div>
+
+    <div id="gridContainer"></div>
+    <div id="message"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
