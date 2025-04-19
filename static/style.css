@@ -6,28 +6,29 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-  }
-  
-  .container {
+    position: relative; /* Add this for absolute positioning of the message */
+}
+
+.container {
     max-width: 800px;
-    margin-top: 20px;
+    margin-top: 80px; /* Increase margin-top to create space from top of the screen */
     padding: 20px;
     background: #2c2c3e;
     border-radius: 10px;
-  }
-  
-  .status {
+}
+
+.status {
     margin-bottom: 20px;
-  }
-  
-  input {
+}
+
+input {
     margin-left: 10px;
     margin-right: 20px;
     padding: 5px;
     border-radius: 5px;
-  }
-  
-  button {
+}
+
+button {
     margin-left: 10px;
     padding: 6px 12px;
     border: none;
@@ -35,21 +36,21 @@ body {
     background: #4caf50;
     color: white;
     cursor: pointer;
-  }
-  
-  button:disabled {
+}
+
+button:disabled {
     background: gray;
     cursor: not-allowed;
-  }
-  
-  #gridContainer {
+}
+
+#gridContainer {
     display: grid;
     grid-template-columns: repeat(5, 60px);
     grid-gap: 10px;
     margin-top: 20px;
-  }
-  
-  .cell {
+}
+
+.cell {
     width: 60px;
     height: 60px;
     background: #444;
@@ -58,19 +59,34 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
-  
-  .cell.safe {
+}
+
+.cell.safe {
     background-color: #4caf50;
-  }
-  
-  .cell.mine {
+}
+
+.cell.mine {
     background-color: #f44336;
-  }
-  
-  #message {
+}
+
+#message {
     margin-top: 20px;
     font-size: 1.2em;
     color: yellow;
-  }
-  
+}
+
+/* Social Awareness Message */
+.social-awareness-message {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 80%;
+    z-index: 9999;
+    margin-bottom: 40px; /* Added margin to create space between the message and the game */
+}
